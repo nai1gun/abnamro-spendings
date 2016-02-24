@@ -1,0 +1,1 @@
+This is a simple program written in Go language that reads a text file imported from ABN-AMRO bank account and calculates the total amount of spendings.
