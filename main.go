@@ -27,9 +27,9 @@ func main() {
 		values := strings.Split(replace, " ")
 		spendingStr := values[6]
 		spendingStr = strings.Replace(spendingStr, ",", ".", 1)
-		spending, err2 := strconv.ParseFloat(spendingStr, 64)
-		if err2 != nil {
-			log.Fatal(err2)
+		spending, err := strconv.ParseFloat(spendingStr, 64)
+		if err != nil {
+			log.Fatal(err)
 		}
 		if (spending < 0) {
 			spent += -spending
