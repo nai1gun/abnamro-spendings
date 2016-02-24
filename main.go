@@ -23,7 +23,6 @@ func main() {
 	for scanner.Scan() {
 		text := scanner.Text()
 		fmt.Println(text)
-		//fmt.Println(re.ReplaceAllString(text, "|"))
 		replace := re.ReplaceAllString(text, " ")
 		values := strings.Split(replace, " ")
 		spendingStr := values[6]
@@ -37,7 +36,7 @@ func main() {
 		}
 		fmt.Printf("%.2f\n", spent)
 	}
-	fmt.Printf("Total spent: %.2f", spent) //+ strconv.FormatFloat(spent, 'E', -1, 64))
+	fmt.Printf("Total spent: %.2f", spent)
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
